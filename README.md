@@ -11,7 +11,7 @@ For example, given the following triangle as an array.
   [4,1,8,3]
 ]```
 
-The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 3 = 11).
+The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).
 
 Your code should work with the following test cases..
 
