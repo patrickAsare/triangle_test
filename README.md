@@ -40,6 +40,16 @@ Your code should work with the following test cases..
 
 **OK We have one solution in that works with the test cases..** - Well done Nzar
 
-but if your are feeling really clever, get it to work with this
+but if your are feeling really clever, get it to work with these
 
 ```var triangle5 = [[2], [3,4], [6,5,7], [4,1,2,3], [4,2,8,1,2],[5,4,8,7,3,2]]```
+
+```var triangle6 = [
+        [2],
+        [3, 4],
+        [6, 5, 7],
+        [4, 1, 2, 3],
+        [4, 2, 2, 1, 2],
+        [5, 4, 8, 4, 3, 2],
+        [6, 5, 9, 1, 4, 3, 2]
+    ]```
