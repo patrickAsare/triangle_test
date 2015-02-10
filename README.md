@@ -35,3 +35,10 @@ Your code should work with the following test cases..
    [4,5,8],
   [1,2,3,6]
 ]```
+
+
+OK We have one solution in that works with the test cases..
+
+but if your are feeling really clever, get it to work with this
+
+```var triangle5 = [[2], [3,4], [6,5,7], [4,1,2,3], [4,2,8,1,2],[5,4,8,7,3,2]]```
