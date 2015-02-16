@@ -1,24 +1,10 @@
 function routes (x) {
     var t = x.length, tforbinaries = t - 1, pow = Math.pow(t, 2), i, max, b, i2, max2, nbSplit, nb, sums, sumHolder = [], curPos, sumResult, sumResultHolder = [], rightAnswer, lowestIndex = 0;
     for (i = 0, max = pow; i < max; i += 1) {
-        b = i.toString(2);
-        if (b.length < tforbinaries) {
-            nb = Array((tforbinaries - b.length) + 1).join("0") + b;
-        } else if (b.length === tforbinaries) {
-            nb = b;
-        } else if (b.length > tforbinaries) {
-            nb = b.slice(Math.abs(tforbinaries) * -1);
-        }
+        b = i.toString(2); nb = (b.length === tforbinaries) ? nb = b : b.length < tforbinaries ? Array((tforbinaries - b.length) + 1).join("0") + b : b.slice(Math.abs(tforbinaries) * -1);
         nbSplit = nb.split(''); curPos = 0; sums = []; sums.push(x[0][0]); sumResult = x[0][0]; //push root val
-        for (i2 = 0, max2 = nbSplit.length; i2 < max2; i2 += 1) {
-            if (nbSplit[i2] === '0') { //turn left, //no new curPos
-            } else if (nbSplit[i2] === '1') { //turn right
-                curPos += 1; //increment curPos
-            }
-            sums.push(x[i2+1][curPos]); sumResult += x[i2+1][curPos];
-        }
-        sumHolder.push(sums); sumResultHolder.push(sumResult);
-        if (sumResult < sumResultHolder[lowestIndex]) { lowestIndex = i; }
+        for (i2 = 0, max2 = nbSplit.length; i2 < max2; i2 += 1) { if (nbSplit[i2] === '1') { curPos += 1; } sums.push(x[i2+1][curPos]); sumResult += x[i2+1][curPos]; }
+        sumHolder.push(sums); sumResultHolder.push(sumResult); if (sumResult < sumResultHolder[lowestIndex]) { lowestIndex = i; }
     }
     return [sumHolder[lowestIndex], sumResultHolder[lowestIndex]];
 }
